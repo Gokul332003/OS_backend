@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+
 app = Flask(__name__)
+
 CORS(app)  # Enable CORS for all routes
 
 @app.route('/simulate', methods=['POST'])
@@ -107,4 +109,4 @@ def optimal(frames, page_references):
 
 if __name__ == '__main__':
     app.debug = True 
-    app.run()
+    app.run() 
