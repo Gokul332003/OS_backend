@@ -3,9 +3,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-@app.route('/')
-def home():
-    return render_template('new.html')
 @app.route('/simulate', methods=['POST'])
 def simulate():
     # Retrieve the simulation settings from the request
